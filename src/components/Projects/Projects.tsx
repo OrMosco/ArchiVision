@@ -2,12 +2,12 @@ import { motion } from 'framer-motion'
 import './Projects.css'
 
 const projects = [
-  { name: 'Horizon Tower', category: 'Commercial', year: '2024' },
-  { name: 'Coastal Villa', category: 'Residential', year: '2023' },
-  { name: 'Urban Hub', category: 'Mixed-Use', year: '2023' },
-  { name: 'Glass Pavilion', category: 'Cultural', year: '2022' },
-  { name: 'Heritage Center', category: 'Civic', year: '2022' },
-  { name: 'Skyline Residences', category: 'Residential', year: '2021' },
+  { name: 'MEP Coordination Suite', category: 'MEP Automation', year: '2024', tech: 'Python · Revit API', accent: 'cyan' },
+  { name: 'Smart City Master Plan', category: 'Urban Design', year: '2024', tech: 'GIS · QGIS', accent: 'gold' },
+  { name: 'Parametric Facade System', category: 'Computational Design', year: '2023', tech: 'Grasshopper · Python', accent: 'cyan' },
+  { name: 'Revit Automation Toolkit', category: 'Software Dev', year: '2023', tech: 'C# · Dynamo', accent: 'cyan' },
+  { name: 'Transit Hub — Haifa Port', category: 'Architecture', year: '2022', tech: 'Revit · AutoCAD', accent: 'gold' },
+  { name: 'Green Infrastructure Plan', category: 'Urban Design', year: '2022', tech: 'QGIS · Rhino', accent: 'gold' },
 ]
 
 const containerVariants = {
@@ -35,9 +35,9 @@ export default function Projects() {
           viewport={{ once: true, margin: '-100px' }}
           transition={{ duration: 0.7 }}
         >
-          <span className="section-label">Our Work</span>
+          <span className="section-label">// Selected Work</span>
           <h2 className="section-title">Featured Projects</h2>
-          <p>A curated selection of our most ambitious architectural achievements across the globe.</p>
+          <p>A curated selection of code, design, and automation projects spanning architecture, urban planning, and MEP engineering.</p>
         </motion.div>
 
         <motion.div
@@ -48,7 +48,7 @@ export default function Projects() {
           viewport={{ once: true, margin: '-50px' }}
         >
           {projects.map((project) => (
-            <motion.div key={project.name} className="project-card" variants={cardVariants}>
+            <motion.div key={project.name} className={`project-card project-card--${project.accent}`} variants={cardVariants}>
               <div className="project-card__image">
                 <div className="project-card__pattern" />
                 <div className="project-card__geo project-card__geo--1" />
@@ -56,6 +56,7 @@ export default function Projects() {
               </div>
               <div className="project-card__info">
                 <div className="project-card__name">{project.name}</div>
+                <div className="project-card__tech">{project.tech}</div>
                 <div className="project-card__meta">
                   <span className="project-card__tag">{project.category}</span>
                   <span className="project-card__year">{project.year}</span>

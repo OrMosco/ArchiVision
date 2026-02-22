@@ -1,18 +1,27 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
 
 :root {
-  --primary: #1a1a2e;
+  --primary: #0d0d1a;
+  --primary-light: #1a1a2e;
   --accent: #c8a96e;
-  --light: #f8f6f0;
-  --text: #2d2d2d;
-  --text-light: #6b6b6b;
+  --accent-2: #00d4ff;
+  --accent-glow: rgba(0, 212, 255, 0.15);
+  --light: #f0f2f5;
+  --surface: #111827;
+  --surface-2: #1e2537;
+  --text: #e2e8f0;
+  --text-muted: #94a3b8;
+  --text-dark: #2d2d2d;
   --white: #ffffff;
   --font-heading: 'Playfair Display', serif;
   --font-body: 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
   --transition: all 0.3s ease;
-  --shadow: 0 4px 20px rgba(0,0,0,0.1);
-  --shadow-hover: 0 12px 40px rgba(0,0,0,0.2);
+  --shadow: 0 4px 20px rgba(0,0,0,0.3);
+  --shadow-hover: 0 12px 40px rgba(0,0,0,0.5);
+  --shadow-glow: 0 0 30px rgba(0, 212, 255, 0.15);
   --border-radius: 8px;
+  --border: 1px solid rgba(255,255,255,0.07);
 }
 
 *, *::before, *::after {
@@ -28,7 +37,7 @@ html {
 body {
   font-family: var(--font-body);
   color: var(--text);
-  background-color: var(--light);
+  background-color: var(--primary);
   overflow-x: hidden;
   line-height: 1.6;
 }
@@ -59,19 +68,20 @@ input, textarea {
 }
 
 .section-label {
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   font-weight: 600;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.25em;
   text-transform: uppercase;
-  color: var(--accent);
+  color: var(--accent-2);
   display: block;
   margin-bottom: 1rem;
+  font-family: var(--font-mono);
 }
 
 .section-title {
   font-family: var(--font-heading);
   font-size: clamp(2rem, 4vw, 3rem);
-  color: var(--primary);
+  color: var(--white);
   margin-bottom: 1.5rem;
 }
 
@@ -79,4 +89,9 @@ input, textarea {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 2rem;
+}
+
+::selection {
+  background: var(--accent-2);
+  color: var(--primary);
 }

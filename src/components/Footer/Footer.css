@@ -1,7 +1,8 @@
 .footer {
-  background: #0f0f1e;
-  color: rgba(255,255,255,0.5);
+  background: var(--primary);
+  color: rgba(255,255,255,0.45);
   padding: 4rem 0 2rem;
+  border-top: 1px solid rgba(0, 212, 255, 0.07);
 }
 
 .footer__inner {
@@ -9,7 +10,7 @@
   grid-template-columns: 1.5fr 1fr 1fr 1fr;
   gap: 3rem;
   padding-bottom: 3rem;
-  border-bottom: 1px solid rgba(255,255,255,0.06);
+  border-bottom: 1px solid rgba(255,255,255,0.05);
   margin-bottom: 2rem;
 }
 
@@ -23,21 +24,23 @@
 }
 
 .footer__brand-logo span {
-  color: var(--accent);
+  color: var(--accent-2);
 }
 
 .footer__brand-desc {
-  font-size: 0.875rem;
-  line-height: 1.7;
+  font-size: 0.85rem;
+  line-height: 1.75;
   max-width: 260px;
+  color: rgba(255,255,255,0.35);
 }
 
 .footer__col-title {
-  font-size: 0.7rem;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
   font-weight: 700;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--white);
+  color: var(--accent-2);
   margin-bottom: 1.25rem;
 }
 
@@ -49,13 +52,13 @@
 }
 
 .footer__links a {
-  font-size: 0.875rem;
-  color: rgba(255,255,255,0.45);
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.35);
   transition: color 0.2s ease;
 }
 
 .footer__links a:hover {
-  color: var(--accent);
+  color: var(--accent-2);
 }
 
 .footer__bottom {
@@ -67,7 +70,9 @@
 }
 
 .footer__copy {
-  font-size: 0.8rem;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: rgba(255,255,255,0.25);
 }
 
 .footer__socials {
@@ -76,25 +81,27 @@
 }
 
 .footer__social {
-  width: 36px;
-  height: 36px;
-  border: 1px solid rgba(255,255,255,0.1);
-  border-radius: 4px;
+  width: 34px;
+  height: 34px;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 3px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 0.75rem;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
   font-weight: 700;
-  color: rgba(255,255,255,0.4);
+  color: rgba(255,255,255,0.3);
   transition: var(--transition);
   cursor: pointer;
   letter-spacing: 0;
 }
 
 .footer__social:hover {
-  border-color: var(--accent);
-  color: var(--accent);
-  background: rgba(200, 169, 110, 0.08);
+  border-color: var(--accent-2);
+  color: var(--accent-2);
+  background: rgba(0, 212, 255, 0.07);
+  box-shadow: 0 0 8px rgba(0, 212, 255, 0.15);
 }
 
 @media (max-width: 1024px) {

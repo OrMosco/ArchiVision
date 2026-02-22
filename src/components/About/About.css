@@ -1,7 +1,18 @@
 .about {
   padding: 8rem 0;
-  background: var(--white);
+  background: var(--primary-light);
   overflow: hidden;
+  position: relative;
+}
+
+.about::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(0, 212, 255, 0.3), transparent);
 }
 
 .about__inner {
@@ -13,11 +24,12 @@
 }
 
 .about__label {
-  font-size: 0.75rem;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
   font-weight: 600;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.25em;
   text-transform: uppercase;
-  color: var(--accent);
+  color: var(--accent-2);
   display: block;
   margin-bottom: 1rem;
 }
@@ -25,20 +37,23 @@
 .about__title {
   font-family: var(--font-heading);
   font-size: clamp(2rem, 3.5vw, 2.8rem);
-  color: var(--primary);
+  color: var(--white);
   line-height: 1.2;
   margin-bottom: 1.5rem;
 }
 
 .about__title em {
   font-style: italic;
-  color: var(--accent);
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .about__text {
-  font-size: 1rem;
-  color: var(--text-light);
-  line-height: 1.8;
+  font-size: 0.975rem;
+  color: var(--text-muted);
+  line-height: 1.85;
   margin-bottom: 1rem;
 }
 
@@ -52,34 +67,37 @@
 .about__signature-line {
   width: 40px;
   height: 1px;
-  background: var(--accent);
+  background: var(--accent-2);
+  box-shadow: 0 0 6px var(--accent-2);
 }
 
 .about__signature-name {
-  font-family: var(--font-heading);
-  font-size: 1.1rem;
-  font-style: italic;
-  color: var(--primary);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  letter-spacing: 0.05em;
 }
 
 .about__stats {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1.5rem;
+  gap: 1.25rem;
 }
 
 .about__stat {
-  background: var(--light);
-  border-radius: var(--border-radius);
-  padding: 2rem;
+  background: var(--surface);
+  border: var(--border);
+  border-radius: 4px;
+  padding: 1.75rem;
   position: relative;
   overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
 .about__stat:hover {
   transform: translateY(-4px);
-  box-shadow: var(--shadow);
+  border-color: rgba(0, 212, 255, 0.2);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.3), 0 0 12px rgba(0, 212, 255, 0.06);
 }
 
 .about__stat::before {
@@ -87,27 +105,27 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 3px;
+  width: 2px;
   height: 100%;
-  background: var(--accent);
+  background: linear-gradient(to bottom, var(--accent-2), var(--accent));
 }
 
 .about__stat-number {
-  font-family: var(--font-heading);
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: var(--primary);
+  font-family: var(--font-mono);
+  font-size: 2.2rem;
+  font-weight: 500;
+  color: var(--white);
   display: block;
   line-height: 1;
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.5rem;
 }
 
 .about__stat-label {
-  font-size: 0.8rem;
-  color: var(--text-light);
+  font-size: 0.75rem;
+  color: var(--text-muted);
   font-weight: 500;
   letter-spacing: 0.05em;
-  text-transform: uppercase;
+  line-height: 1.4;
 }
 
 .about__timeline {
@@ -116,9 +134,11 @@
 }
 
 .about__timeline-title {
-  font-family: var(--font-heading);
-  font-size: 1.5rem;
-  color: var(--primary);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--accent-2);
   margin-bottom: 2.5rem;
   text-align: center;
 }
@@ -137,7 +157,7 @@
   top: 0;
   bottom: 0;
   width: 1px;
-  background: linear-gradient(to bottom, transparent, var(--accent) 15%, var(--accent) 85%, transparent);
+  background: linear-gradient(to bottom, transparent, rgba(0, 212, 255, 0.4) 15%, rgba(0, 212, 255, 0.4) 85%, transparent);
 }
 
 .about__timeline-item {
@@ -158,16 +178,16 @@
   width: 11px;
   height: 11px;
   border-radius: 50%;
-  background: var(--accent);
-  border: 2px solid var(--white);
-  box-shadow: 0 0 0 3px rgba(200, 169, 110, 0.2);
+  background: var(--accent-2);
+  border: 2px solid var(--primary-light);
+  box-shadow: 0 0 0 3px rgba(0, 212, 255, 0.15), 0 0 8px rgba(0, 212, 255, 0.4);
 }
 
 .about__timeline-year {
-  font-family: var(--font-heading);
-  font-size: 0.9rem;
-  font-weight: 700;
-  color: var(--accent);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--accent-2);
   text-align: right;
   padding-right: 1rem;
 }
@@ -175,14 +195,14 @@
 .about__timeline-content h4 {
   font-family: var(--font-heading);
   font-size: 1rem;
-  color: var(--primary);
+  color: var(--white);
   margin-bottom: 0.3rem;
 }
 
 .about__timeline-content p {
   font-size: 0.875rem;
-  color: var(--text-light);
-  line-height: 1.5;
+  color: var(--text-muted);
+  line-height: 1.6;
 }
 
 @media (max-width: 1024px) {

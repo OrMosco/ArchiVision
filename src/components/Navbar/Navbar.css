@@ -9,11 +9,12 @@
 }
 
 .navbar.scrolled {
-  background: rgba(255, 255, 255, 0.92);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background: rgba(13, 13, 26, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   padding: 1rem 0;
-  box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+  box-shadow: 0 2px 30px rgba(0,0,0,0.4);
+  border-bottom: 1px solid rgba(0, 212, 255, 0.07);
 }
 
 .navbar__inner {
@@ -24,7 +25,7 @@
 
 .navbar__logo {
   font-family: var(--font-heading);
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   font-weight: 700;
   color: var(--white);
   letter-spacing: 0.02em;
@@ -32,12 +33,8 @@
   cursor: pointer;
 }
 
-.navbar.scrolled .navbar__logo {
-  color: var(--primary);
-}
-
 .navbar__logo span {
-  color: var(--accent);
+  color: var(--accent-2);
 }
 
 .navbar__links {
@@ -47,17 +44,14 @@
 }
 
 .navbar__links a {
-  font-size: 0.875rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
   font-weight: 500;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.85);
+  color: rgba(255,255,255,0.6);
   position: relative;
   transition: var(--transition);
-}
-
-.navbar.scrolled .navbar__links a {
-  color: var(--text);
 }
 
 .navbar__links a::after {
@@ -67,34 +61,33 @@
   left: 0;
   width: 0;
   height: 1px;
-  background: var(--accent);
+  background: var(--accent-2);
+  box-shadow: 0 0 6px var(--accent-2);
   transition: width 0.3s ease;
 }
 
 .navbar__links a:hover {
-  color: var(--accent);
+  color: var(--accent-2);
 }
 
 .navbar__links a:hover::after {
   width: 100%;
 }
 
-.navbar.scrolled .navbar__links a:hover {
-  color: var(--accent);
-}
-
 .navbar__cta {
-  background: var(--accent);
-  color: var(--primary) !important;
-  padding: 0.6rem 1.5rem;
+  background: rgba(0, 212, 255, 0.1) !important;
+  color: var(--accent-2) !important;
+  padding: 0.55rem 1.25rem;
   border-radius: 2px;
   font-weight: 600 !important;
+  border: 1px solid rgba(0, 212, 255, 0.3) !important;
   transition: var(--transition) !important;
 }
 
 .navbar__cta:hover {
-  background: var(--primary) !important;
-  color: var(--white) !important;
+  background: var(--accent-2) !important;
+  color: var(--primary) !important;
+  box-shadow: 0 0 16px rgba(0, 212, 255, 0.3) !important;
 }
 
 .navbar__cta::after {
@@ -112,22 +105,19 @@
 .navbar__hamburger span {
   display: block;
   width: 24px;
-  height: 2px;
+  height: 1px;
   background: var(--white);
   transition: var(--transition);
-  border-radius: 2px;
-}
-
-.navbar.scrolled .navbar__hamburger span {
-  background: var(--primary);
 }
 
 .navbar__mobile {
   display: none;
   flex-direction: column;
-  background: var(--white);
+  background: rgba(13, 13, 26, 0.97);
+  backdrop-filter: blur(16px);
   padding: 1rem 0;
   gap: 0;
+  border-top: 1px solid rgba(0, 212, 255, 0.1);
 }
 
 .navbar__mobile.open {
@@ -135,19 +125,20 @@
 }
 
 .navbar__mobile a {
-  padding: 0.75rem 2rem;
-  font-size: 0.875rem;
+  padding: 0.85rem 2rem;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
   font-weight: 500;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--text);
-  border-bottom: 1px solid rgba(0,0,0,0.05);
+  color: rgba(255,255,255,0.6);
+  border-bottom: 1px solid rgba(255,255,255,0.04);
   transition: var(--transition);
 }
 
 .navbar__mobile a:hover {
-  color: var(--accent);
-  background: var(--light);
+  color: var(--accent-2);
+  background: rgba(0, 212, 255, 0.05);
 }
 
 @media (max-width: 768px) {
