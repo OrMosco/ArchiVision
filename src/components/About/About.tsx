@@ -2,18 +2,18 @@ import { motion } from 'framer-motion'
 import './About.css'
 
 const stats = [
-  { number: '50+', label: 'Projects Completed' },
-  { number: '15+', label: 'Years of Experience' },
-  { number: '30+', label: 'Awards Won' },
-  { number: '100%', label: 'Client Satisfaction' },
+  { number: '20+', label: 'Projects Delivered' },
+  { number: '5+', label: 'Years in Tech + Design' },
+  { number: '3', label: 'Domains: Arch · Urban · MEP' },
+  { number: '∞', label: 'Lines of Code' },
 ]
 
 const timeline = [
-  { year: '2009', title: 'Studio Founded', desc: 'Established in the heart of the city with a vision for transformative design.' },
-  { year: '2013', title: 'First Major Award', desc: 'Received the National Architecture Excellence Award for the Meridian Tower project.' },
-  { year: '2017', title: 'International Expansion', desc: 'Opened offices in London and Tokyo, bringing our philosophy to global markets.' },
-  { year: '2021', title: '50th Project Milestone', desc: 'Celebrated the completion of our 50th landmark project across three continents.' },
-  { year: '2024', title: 'Sustainable Innovation', desc: 'Launched our Net-Zero Architecture initiative, pioneering eco-conscious design.' },
+  { year: '2018', title: 'Architecture Degree', desc: 'Graduated with a B.Arch — building a foundation in design theory, construction, and spatial thinking.' },
+  { year: '2019', title: 'First Code Project', desc: 'Wrote a Dynamo script to automate repetitive Revit tasks. Realized code could transform design workflows entirely.' },
+  { year: '2021', title: 'MEP Automation Focus', desc: 'Specialized in automating MEP coordination using Revit API and Python — reducing clash-detection time from days to hours.' },
+  { year: '2022', title: 'Urban Design & GIS', desc: 'Expanded into urban-scale projects and data-driven city analysis using QGIS, GIS, and parametric urbanism tools.' },
+  { year: '2024', title: 'ArchiVision Studio', desc: 'Launched as an independent studio offering software development, parametric design, and full-spectrum architectural services.' },
 ]
 
 export default function About() {
@@ -27,19 +27,19 @@ export default function About() {
             viewport={{ once: true, margin: '-100px' }}
             transition={{ duration: 0.7 }}
           >
-            <span className="about__label">About Us</span>
+            <span className="about__label">// About</span>
             <h2 className="about__title">
-              Design With <em>Purpose</em>,<br />Build With Precision
+              Architect Who<br /><em>Writes Code</em>
             </h2>
             <p className="about__text">
-              For over fifteen years, ArchiVision has been shaping the built environment through bold design thinking and meticulous craftsmanship. Our studio is founded on the belief that exceptional architecture transcends mere function.
+              I work at the crossroads of architecture and software engineering — designing spaces, building automation tools, and solving complex problems that sit between the digital and the built world.
             </p>
             <p className="about__text">
-              We approach every project as a unique dialogue between human need, cultural context, and spatial possibility — creating structures that are not just inhabitable, but truly alive.
+              From MEP automation scripts that save weeks of coordination time, to urban master plans shaped by data, to web-based design tools — my work is driven by one idea: technology should amplify good design, not replace it.
             </p>
             <div className="about__signature">
               <div className="about__signature-line" />
-              <span className="about__signature-name">Elena Marchetti, Principal Architect</span>
+              <span className="about__signature-name">ArchiVision Studio</span>
             </div>
           </motion.div>
 
@@ -73,7 +73,7 @@ export default function About() {
           viewport={{ once: true, margin: '-50px' }}
           transition={{ duration: 0.7 }}
         >
-          <h3 className="about__timeline-title">Our Journey</h3>
+          <h3 className="about__timeline-title">Journey</h3>
           <div className="about__timeline-items">
             {timeline.map((item, i) => (
               <motion.div

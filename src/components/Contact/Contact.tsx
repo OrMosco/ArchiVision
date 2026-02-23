@@ -58,17 +58,17 @@ export default function Contact() {
             viewport={{ once: true, margin: '-100px' }}
             transition={{ duration: 0.7 }}
           >
-            <span className="contact__label">Get In Touch</span>
-            <h2 className="contact__title">Let's Create Something Extraordinary</h2>
+            <span className="contact__label">// Get In Touch</span>
+            <h2 className="contact__title">Let's Build Something Together</h2>
             <p className="contact__subtitle">
-              Ready to transform your vision into reality? Our team is here to guide you through every step of the architectural journey.
+              Have a project in mind? Looking for MEP automation, parametric design, or architectural services? Let's talk.
             </p>
 
             <div className="contact__details">
               {[
-                { icon: <MapPin size={18} />, label: 'Studio', value: '14 Meridian Place, London EC1V 9HX' },
                 { icon: <Mail size={18} />, label: 'Email', value: 'hello@archivision.studio' },
-                { icon: <Phone size={18} />, label: 'Phone', value: '+44 20 7946 0123' },
+                { icon: <MapPin size={18} />, label: 'Based In', value: 'Tel Aviv, Israel' },
+                { icon: <Phone size={18} />, label: 'Available', value: 'Sun – Thu, 09:00 – 18:00' },
               ].map(d => (
                 <div className="contact__detail" key={d.label}>
                   <div className="contact__detail-icon">{d.icon}</div>
